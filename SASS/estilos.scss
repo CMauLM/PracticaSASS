@@ -1,0 +1,64 @@
+@mixin boxstyle {
+    $borderstyle: 2px solid black;
+   $borderradius-style: 6%;
+   $margin: 5px;
+   }
+
+$borderstyle: 2px solid black;
+$borderradius-style: 6%;
+$margin: 5px;
+
+.container  {  
+    display: grid;
+    grid-template: 100px 300px 300px 100px / 100% ;
+}
+.mainpart {
+    display: flex;
+    grid-row-start: 1;
+    grid-row-end: 2;   
+     border: $borderstyle;
+    border-radius: $borderradius-style;
+    justify-content: space-between;
+        .mainpart-content {    
+            padding: 25px;
+        display: inline-block;
+        .marioimg {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.linea2 {
+     display: grid;
+     border: $borderstyle;
+     border-radius: $borderradius-style;
+     grid-row: 2;
+     grid-template-columns: 20% 40% 40%;
+    .modulo {
+        grid-column: 1;
+        // margin: $margin;       
+        // border: $borderstyle;
+        // border-radius: $borderradius-style;
+        @include boxstyle; 
+    }
+    .grafica{
+        grid-column: 2;
+        margin: $margin;       
+        border: $borderstyle;
+        border-radius: $borderradius-style;
+    }
+    .graficados{
+        grid-column: 3;
+        margin: $margin;       
+        border: $borderstyle;
+        border-radius: $borderradius-style;
+    }
+} 
+
+.linea3 {
+    display: flex;
+    grid-row: 3;
+    @include boxstyle; 
+}
+    
