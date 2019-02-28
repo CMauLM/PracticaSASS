@@ -1,3 +1,7 @@
+.linea3 .l3-grafica2, .linea2 .modulo {
+  justify-content: center;
+}
+
 .container {
   display: grid;
   grid-template: 100px 300px 300px 100px/100%;
@@ -22,6 +26,12 @@
   height: 50px;
 }
 
+.cajacentro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .linea2 {
   display: grid;
   grid-row: 2;
@@ -29,7 +39,6 @@
 }
 .linea2 .modulo {
   grid-column: 1;
-  align-content: center;
 }
 .linea2 .grafica {
   grid-column: 2;
@@ -37,6 +46,7 @@
   border: 5px solid black;
   border-radius: 6%;
   background: white;
+  align-content: center;
 }
 .linea2 .graficados {
   grid-column: 3;
@@ -60,7 +70,6 @@
 }
 .linea3 .l3-grafica2 {
   grid-column: 2;
-  align-content: center;
 }
 
 .linea4 {

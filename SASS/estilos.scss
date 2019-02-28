@@ -1,18 +1,20 @@
-@mixin boxstyle {
+%boxstyle {
     $borderstyle: 2px solid black;
    $borderradius-style: 6%;
    $margin: 5px;
    $background: white;
-   align-content: center;
+   justify-content: center;
 
    }
 
  
-$borderstyle: 5px solid black;
+ $borderstyle: 5px solid black;
 $borderradius-style: 6%;
 $margin: 10px;
 $background: white;
-
+$display: flex;
+$justify-content: center;
+$align-items: center;
 
 
 .container  {  
@@ -39,6 +41,11 @@ $background: white;
     }
 }
 
+.cajacentro {
+    display: flex;
+justify-content: center;
+align-items: center;
+}
 .linea2 {
      display: grid;
         grid-row: 2;
@@ -48,14 +55,17 @@ $background: white;
         // margin: $margin;       
         // border: $borderstyle;
         // border-radius: $borderradius-style;
-        @include boxstyle; 
+        @extend %boxstyle; 
+
     }
+ 
     .grafica{
         grid-column: 2;
         margin: $margin;       
         border: $borderstyle;
         border-radius: $borderradius-style;
         background: $background;
+        align-content: center;
     }
     .graficados{
         grid-column: 3;
@@ -80,7 +90,7 @@ $background: white;
     }
     .l3-grafica2 {
         grid-column: 2;
-        @include boxstyle; 
+        @extend %boxstyle; 
         // margin: $margin;       
         // border: $borderstyle;
         // border-radius: $borderradius-style;
