@@ -2,15 +2,23 @@
     $borderstyle: 2px solid black;
    $borderradius-style: 6%;
    $margin: 5px;
+   $background: white;
+   align-content: center;
+
    }
 
-$borderstyle: 2px solid black;
+ 
+$borderstyle: 5px solid black;
 $borderradius-style: 6%;
-$margin: 5px;
+$margin: 10px;
+$background: white;
+
+
 
 .container  {  
     display: grid;
     grid-template: 100px 300px 300px 100px / 100% ;
+    background: #22475A;
 }
 .mainpart {
     display: flex;
@@ -19,6 +27,8 @@ $margin: 5px;
      border: $borderstyle;
     border-radius: $borderradius-style;
     justify-content: space-between;
+    background: $background;
+
         .mainpart-content {    
             padding: 25px;
         display: inline-block;
@@ -31,9 +41,7 @@ $margin: 5px;
 
 .linea2 {
      display: grid;
-     border: $borderstyle;
-     border-radius: $borderradius-style;
-     grid-row: 2;
+        grid-row: 2;
      grid-template-columns: 20% 40% 40%;
     .modulo {
         grid-column: 1;
@@ -47,18 +55,51 @@ $margin: 5px;
         margin: $margin;       
         border: $borderstyle;
         border-radius: $borderradius-style;
+        background: $background;
     }
     .graficados{
         grid-column: 3;
         margin: $margin;       
         border: $borderstyle;
         border-radius: $borderradius-style;
+        background: $background;
     }
 } 
 
 .linea3 {
-    display: flex;
+    display: grid;
     grid-row: 3;
-    @include boxstyle; 
-}
     
+    grid-template-columns: 65% 35%;
+    .l3-grafica1 {
+            grid-column: 1;
+            margin: $margin;       
+            border: $borderstyle;
+            border-radius: $borderradius-style;
+            background: $background;
+    }
+    .l3-grafica2 {
+        grid-column: 2;
+        @include boxstyle; 
+        // margin: $margin;       
+        // border: $borderstyle;
+        // border-radius: $borderradius-style;
+        // background: $background;
+}}
+    
+.linea4 {
+    display: flex;
+    grid-row: 4;   
+     border: $borderstyle;
+    border-radius: $borderradius-style;
+    justify-content: space-between;
+    background: $background;
+    .linea4-content{
+        padding: 25px;
+        display: inline-block;
+    .marioimg{      
+        width: 50px;
+        height: 50px;
+    }
+}   
+}
