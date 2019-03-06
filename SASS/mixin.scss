@@ -1,5 +1,5 @@
-@mixin boxstyle {
-    $borderstyle: 2px solid black;
-   $borderradius-style: 6%;
-   $margin: 5px;
+@mixin boxstyle() {
+    border: 2px solid black;
+   border-radius: 6%;
+   margin: 5px;
    }
